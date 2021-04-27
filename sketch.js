@@ -93,13 +93,13 @@ function draw(){
 strokeWeight(5);
 stroke(0);
 fill("red");
-textSize(20);
+textSize(28);
 text("Score: "+ score, windowWidth-50,50);
 if(gamestate==='Start'){
   fill("orange");
   strokeWeight(5);
   stroke("red");
-  textSize(17)
+  textSize(15)
   text("Instructions :-", windowWidth/2-100,220);
   text("Press the buttons in the top right corner to move", windowWidth/2-100, 250);
   text("Avoid the meteorites!", windowWidth/2-100, 280);
@@ -107,7 +107,7 @@ if(gamestate==='Start'){
   fill("orange");
   strokeWeight(7);
   stroke("blue");
-  textSize(50);
+  textSize(30);
   text("Extinction Event",windowWidth/2, 80);
   if(keyDown('space')){
     gamestate='Play';
