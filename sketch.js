@@ -93,7 +93,7 @@ function draw(){
 strokeWeight(5);
 stroke(0);
 fill("red");
-textSize(28);
+textSize(18);
 text("Score: "+ score, windowWidth-50,50);
 if(gamestate==='Start'){
   fill("orange");
@@ -101,13 +101,13 @@ if(gamestate==='Start'){
   stroke("red");
   textSize(15)
   text("Instructions :-", windowWidth/2-100,220);
-  text("Press the buttons in the top right corner to move", windowWidth/2-100, 250);
-  text("Avoid the meteorites!", windowWidth/2-100, 280);
-  text("Press Space to play", windowWidth/2-100, 310)
+  text("Press the buttons in the top right corner to move", windowWidth/2-200, 250);
+  text("Avoid the meteorites!", windowWidth/2-200, 280);
+  text("Press Space to play", windowWidth/2-200, 310)
   fill("orange");
   strokeWeight(7);
   stroke("blue");
-  textSize(30);
+  textSize(35);
   text("Extinction Event",windowWidth/2, 80);
   if(keyDown('space')){
     gamestate='Play';
@@ -176,7 +176,7 @@ if(gamestate==='Start'){
     strokeWeight(3);
     stroke("blue");
     textSize(30);
-    text("Game over! Dino went extinct!", 500, 200);
+    text("Game over! Dino went extinct!", windowWidth/2-150, 200);
 
   }
   
