@@ -94,12 +94,12 @@ strokeWeight(5);
 stroke(0);
 fill("red");
 textSize(18);
-text("Score: "+ score, windowWidth-50,50);
+text("Score: "+ score, windowWidth/2-50,50);
 if(gamestate==='Start'){
   fill("orange");
   strokeWeight(5);
   stroke("red");
-  textSize(15)
+  textSize(10)
   text("Instructions :-", windowWidth/2-100,220);
   text("Press the buttons in the top right corner to move", windowWidth/2-200, 250);
   text("Avoid the meteorites!", windowWidth/2-200, 280);
@@ -108,7 +108,7 @@ if(gamestate==='Start'){
   strokeWeight(7);
   stroke("blue");
   textSize(35);
-  text("Extinction Event",windowWidth/2, 80);
+  text("Extinction Event",windowWidth/2-200, 80);
   if(keyDown('space')){
     gamestate='Play';
 
