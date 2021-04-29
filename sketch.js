@@ -220,7 +220,7 @@ function spawnPlatforms() {
     platforms.addImage(meteoriteImg);
     platforms.velocityY=(6+3*score/100);
     platforms.scale=0.1; 
-    platforms.lifetime = 200;
+    platforms.lifetime = 500;
     platforms.y+=20;
     platformsGroup.add(platforms);
     console.log(platforms.velocityY);
