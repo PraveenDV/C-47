@@ -180,9 +180,8 @@ if(gamestate==='Start'){
 
   }
   
-  if(mousePressedOver(restart)|| touches.length>0){
+  if(mousePressedOver(restart)){
   reset();
-    touches=[];
   }
   
   //trex.collide(ground);
