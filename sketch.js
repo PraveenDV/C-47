@@ -50,18 +50,18 @@ leftButton.position(windowWidth-100, 50);
 rightButton=createButton("->");
 rightButton.position(windowWidth-50, 50)  
 
-  trex = createSprite(windowWidth-650,575,1,1);
+  trex = createSprite(windowWidth-650,windowHeight-100,1,1);
   trex.visible=false;
   //trex.scale = 0.9;
   trex.setCollider("circle",8,0,40);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided",trex_collided); 
 
- ground = createSprite(0,615,1600,20);
+ ground = createSprite(0,windowHeight-100,1600,20);
  ground.x = ground.width/2;
  ground.visible=false;
   
- invisibleGround = createSprite(400,603,2000,3);
+ invisibleGround = createSprite(0,windowHeight-100,2000,3);
  invisibleGround.visible = false;
   
   cloudsGroup = new Group();
@@ -71,13 +71,13 @@ rightButton.position(windowWidth-50, 50)
   
   score = 0;
   
-  gameover=createSprite(600,300,10,10);
+  gameover=createSprite(windowWidth-600,300,10,10);
   gameover.addImage(gameoverimg);
-  gameover.scale=0.4;
+  gameover.scale=2;
   
-  restart=createSprite(600,280,10,10);
+  restart=createSprite(windowWidth-400,280,10,10);
   restart.addImage(restartimg);
-  restart.scale=0.4;
+  restart.scale=2;
   
   restart.visible=false;
   gameover.visible=false;
@@ -103,7 +103,7 @@ if(gamestate==='Start'){
   text("Instructions :-", windowWidth/2-100,220);
   text("Press the buttons in the top right corner to move", windowWidth/2-200, 250);
   text("Avoid the meteorites!", windowWidth/2-200, 280);
-  text("Press Space to play", windowWidth/2-200, 310)
+  text("Touch the screen to play", windowWidth/2-200, 310);
   fill("orange");
   strokeWeight(7);
   stroke("blue");
@@ -175,13 +175,14 @@ if(gamestate==='Start'){
     fill("red");
     strokeWeight(3);
     stroke("blue");
-    textSize(30);
+    textSize(50);
     text("Game over! Dino went extinct!", windowWidth/2-150, 200);
 
   }
   
-  if(mousePressedOver(restart)){
+  if(mousePressedOver(restart)|| touches.length>0){
   reset();
+    touches=[];
   }
   
   //trex.collide(ground);
