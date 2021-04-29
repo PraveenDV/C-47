@@ -109,9 +109,9 @@ if(gamestate==='Start'){
   stroke("blue");
   textSize(50);
   text("Extinction Event",windowWidth/2-200, 80);
-  if(keyDown('space')){
+  if(keyDown('space')|| touches.length>0){
     gamestate='Play';
-
+    touches=[];
   }
 
  
